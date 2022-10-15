@@ -1,0 +1,33 @@
+.container{
+  margin: 50px 0;
+  width: 80%;
+}
+
+.card{
+  margin: 0 2% !important;
+}
+
+.positive{
+  border-bottom: 10px solid #e63946;
+}
+
+.negative{
+  border-bottom: 10px solid #3a86ff;
+}
+
+.deaths{
+  border-bottom: 10px solid #6c757d;
+}
+
+.gridcontainer{
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
