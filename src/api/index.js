@@ -9,23 +9,6 @@ export const fetchData = async (state) => {
   const code = NameToCode(state);
   let changeableUrl = url;
 
-  // console.log(changeableUrl);
-
-  // if(code) {
-  //   changeableUrl = `https://api.covidtracking.com/v1/states/${code}/current.json`;
-  // }
-
-  // console.log(changeableUrl);
-
-  // try {
-  //   const { data: [{positive, negative, death, dateChecked}] } = await axios.get(changeableUrl);
-
-  //   return { positive, negative, death, dateChecked}
-  // } catch (error) {
-  //   console.log(error);
-  // }
-
-  // ------------
   if(code) {
     changeableUrl = `https://api.covidtracking.com/v1/states/${code}/current.json`;
     try {

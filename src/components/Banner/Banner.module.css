@@ -1,0 +1,11 @@
+.banner{
+  width: 80% !important;
+  height: 400px !important;
+  background-image: url(/src/img/covid.jpeg);
+  background-size: 80%;
+  /* background-position: auto 100%; */
+}
+
+.image{
+  width: 100%;
+}
