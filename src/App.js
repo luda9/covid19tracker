@@ -17,17 +17,18 @@ class App extends React.Component {
   }
 
   handleStateChange = async (state) => {
-    console.log(state);
     const fetchedData = await fetchData(state);
+
+    this.setState({ data: fetchedData, state: state });
   }
 
 	render(){
-    const { data } = this.state;
+    const { data, state } = this.state;
 		return (
 			<div className={styles.container}>
 				<Cards data={data}/>
 				<StatePicker handleStateChange={this.handleStateChange} />
-				<Chart />
+				<Chart data={data} state={state} />
 			</div>
 			)
 		}

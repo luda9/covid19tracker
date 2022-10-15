@@ -1,19 +1,48 @@
 import axios from "axios";
-import Statecodes from "./Statecodes";
+import NameToCode from "./NameToCode.jsx";
+
+
 
 const url = "https://api.covidtracking.com/v1/us/current.json";
 
 export const fetchData = async (state) => {
-  console.log(state.state)
-  if(state) {
-    // changeableUrl = "";
-  }
-  try {
-    const { data: [{positive, negative, death, dateChecked}] } = await axios.get(url);
+  const code = NameToCode(state);
+  let changeableUrl = url;
 
-    return { positive, negative, death, dateChecked}
-  } catch (error) {
+  // console.log(changeableUrl);
 
+  // if(code) {
+  //   changeableUrl = `https://api.covidtracking.com/v1/states/${code}/current.json`;
+  // }
+
+  // console.log(changeableUrl);
+
+  // try {
+  //   const { data: [{positive, negative, death, dateChecked}] } = await axios.get(changeableUrl);
+
+  //   return { positive, negative, death, dateChecked}
+  // } catch (error) {
+  //   console.log(error);
+  // }
+
+  // ------------
+  if(code) {
+    changeableUrl = `https://api.covidtracking.com/v1/states/${code}/current.json`;
+    try {
+      const { data: {positive, negative, death, dateChecked} } = await axios.get(changeableUrl);
+
+      return { positive, negative, death, dateChecked}
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    try {
+      const { data: [{positive, negative, death, dateChecked}] } = await axios.get(url);
+
+      return { positive, negative, death, dateChecked}
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
