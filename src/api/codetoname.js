@@ -1,4 +1,4 @@
-[
+const states = [
   { "Alabama": {
     "code": "AL"
     }
@@ -220,3 +220,10 @@
     }
   }
 ]
+
+let ciudad = 'California';
+
+let code = states[0].ciudad.code;
+
+
+console.log(code);

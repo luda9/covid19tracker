@@ -4,11 +4,35 @@ import { fetchDailyData } from "../../api";
 
 import styles from './Chart.module.css'
 
-import {Chart as ChartJS,CategoryScale,LinearScale,PointElement,LineElement,Title,Tooltip,Legend} from 'chart.js';
+import {Chart as ChartJS,  ArcElement, LineElement, BarElement, PointElement, BarController, BubbleController, DoughnutController, LineController, PieController, PolarAreaController, RadarController, ScatterController, CategoryScale, LinearScale, LogarithmicScale, RadialLinearScale, TimeScale, TimeSeriesScale, Decimation, Filler, Legend, Title, Tooltip,
+  SubTitle} from 'chart.js';
 
-ChartJS.register(CategoryScale,LinearScale,PointElement,LineElement,Title,Tooltip,Legend);
+ChartJS.register(  ArcElement,
+  LineElement,
+  BarElement,
+  PointElement,
+  BarController,
+  BubbleController,
+  DoughnutController,
+  LineController,
+  PieController,
+  PolarAreaController,
+  RadarController,
+  ScatterController,
+  CategoryScale,
+  LinearScale,
+  LogarithmicScale,
+  RadialLinearScale,
+  TimeScale,
+  TimeSeriesScale,
+  Decimation,
+  Filler,
+  Legend,
+  Title,
+  Tooltip,
+  SubTitle);
 
-const Chart = () => {
+const Chart = ( {data: {positive, negative, death}, state}) => {
   const [dailyData, setDailyData] = useState({});
 
   useEffect(() => {
@@ -39,9 +63,32 @@ const Chart = () => {
       }}
     />) : null
   );
+
+  console.log(positive, negative, death)
+
+  const barChart = (
+    positive
+      ? (
+        <Bar
+          data={{
+            labels: ['Positive', 'Negative', 'Deaths'],
+            datasets: [{
+              label: 'People',
+              backgroundColor: ['#e63946', '#3a86ff', '#6c757d'],
+              data:[positive, negative, death]
+            }]
+          }}
+          options={{
+            legend: {display: false},
+            title: {display: true, text:`Current state ${state}`},
+          }}
+        />
+      ) : null
+  )
+
   return (
     <div className={styles.container}>
-      {lineChart}
+      {state ? barChart : lineChart}
     </div>
   )
 }
