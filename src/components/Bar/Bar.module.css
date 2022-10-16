@@ -1,0 +1,18 @@
+.bar{
+  background-color: #ccc;
+  height: 180px;
+  margin: 50px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bar img{
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.bar img:hover{
+  transform: scale(1.2);
+}
