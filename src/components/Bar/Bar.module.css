@@ -16,3 +16,12 @@
 .bar img:hover{
   transform: scale(1.2);
 }
+
+@media (max-width: 800px){
+  .bar{
+    height: 120px;
+  }
+  .bar img{
+    transform: scale(0.5);
+  }
+}

@@ -43,3 +43,16 @@
   border-radius: 5px;
   margin-top: 20px;
 }
+
+
+@media (max-width: 680px){
+  .trackerContainer{
+    flex-direction: column;
+  }
+  .imagemap{
+    width: 70%;
+  }
+  .info{
+    width: 80%;
+  }
+}

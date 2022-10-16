@@ -1,0 +1,31 @@
+.footer{
+  width: 100%;
+  background-color: #6156E7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+  color: #fff;
+  justify-content: center;
+}
+
+.footerbutton{
+  margin-left: 10px;
+}
+
+
+.links{
+  margin: 10px 0;
+
+}
+
+.links a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon{
+  color: white;
+  font-size: 24px;
+  margin-left: 20px;
+}
