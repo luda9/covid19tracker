@@ -6,3 +6,4 @@ export { default as Banner } from './Banner/Banner';
 export { default as Covidinfo } from './Covidinfo/Covidinfo.jsx';
 export { default as Bar } from './Bar/Bar.jsx';
 export { default as TrackerSection } from './TrackerSection/TrackerSection.jsx';
+export { default as Footer } from './Footer/Footer.jsx';

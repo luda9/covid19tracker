@@ -1,5 +1,5 @@
 import React from "react";
-import { Cards, Chart, StatePicker, Navbar, Banner, Covidinfo, Bar, TrackerSection} from "./components";
+import { Cards, Chart, StatePicker, Navbar, Banner, Covidinfo, Bar, TrackerSection, Footer} from "./components";
 import styles from "./App.module.css";
 import { fetchData } from "./api";
 import { Route, Routes } from "react-router-dom";
@@ -28,7 +28,7 @@ class App extends React.Component {
 		return (
 			<div className={styles.container}>
         <Routes>
-        <Route path="/" element={<><Navbar /><Banner /><Bar /><Covidinfo /><TrackerSection /></>}/>
+        <Route path="/" element={<><Navbar /><Banner /><Bar /><Covidinfo /><TrackerSection /><Footer /></>}/>
           <Route path="/statistics" element={<><Navbar /><Cards data={data}/><StatePicker handleStateChange={this.handleStateChange} /><Chart data={data} state={state} /></>}/>
         </Routes>
 			</div>

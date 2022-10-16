@@ -34,3 +34,35 @@
   font-size: 14px;
   text-align: left;
 }
+
+@media (max-width: 1340px){
+  .questions{
+    height: 700px;
+  }
+}
+
+@media (max-width: 1100px){
+  .questions{
+    height: 800px;
+  }
+}
+
+@media (max-width: 1000px){
+  .covidContainer{
+    flex-direction: column;
+  }
+  .preventions{
+    width: 90%;
+  }
+  .questions{
+    width: 90%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px){
+  .list{
+    flex-direction: column;
+  }
+}
