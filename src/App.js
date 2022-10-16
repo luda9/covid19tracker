@@ -3,6 +3,7 @@ import { Cards, Chart, StatePicker, Navbar, Banner, Covidinfo, Bar, TrackerSecti
 import styles from "./App.module.css";
 import { fetchData } from "./api";
 import { Route, Routes } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 class App extends React.Component {
@@ -28,8 +29,8 @@ class App extends React.Component {
 		return (
 			<div className={styles.container}>
         <Routes>
-        <Route path="/" element={<><Navbar /><Banner /><Bar /><Covidinfo /><TrackerSection /><Footer /></>}/>
-          <Route path="/statistics" element={<><Navbar /><Cards data={data}/><StatePicker handleStateChange={this.handleStateChange} /><Chart data={data} state={state} /></>}/>
+          <Route path="/" element={<><Navbar /><Banner /><Bar /><Covidinfo /><TrackerSection /><Footer /><Helmet><title>Covid Tracker - Home</title></Helmet></>}/>
+          <Route path="/statistics" element={<><Navbar /><Cards data={data}/><StatePicker handleStateChange={this.handleStateChange} /><Chart data={data} state={state} /><Footer /><Helmet><title>Covid Tracker - Statistics</title></Helmet></>}/>
         </Routes>
 			</div>
 			)
