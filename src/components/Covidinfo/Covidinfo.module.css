@@ -1,0 +1,36 @@
+.covidContainer{
+  width: 90%;
+  display: flex;
+}
+
+.list{
+  display: flex;
+}
+
+.preventions{
+  width: 65%;
+  padding: 0 20px;
+}
+
+.questions{
+  width: 35%;
+  background-color: #D5D3EF;
+  margin: 20px 20px;
+  height: 600px;
+  display: inline;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question{
+  width: 80%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+.answer{
+  font-size: 14px;
+  text-align: left;
+}
