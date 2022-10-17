@@ -1,7 +1,7 @@
 {
   "name": "covid19tracker",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "http://luda9.github.io/covid19tracker",
   "dependencies": {
     "@emotion/react": "^11.10.4",
