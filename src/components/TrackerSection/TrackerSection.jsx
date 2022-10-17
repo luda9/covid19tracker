@@ -21,7 +21,7 @@ function TrackerSection() {
           country, displays the positive cases and deaths. You can interact with
           the main chart watching a linetime with all the numbers.
         </p>
-        <Link to="covid19tracker/statistics" className={styles.button}>Statistics</Link>
+        <Link to="/covid19tracker/statistics" className={styles.button}>Statistics</Link>
       </div>
     </div>
   );
