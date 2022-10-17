@@ -1,6 +1,7 @@
 .container{
-  margin: 50px 0;
-  width: 80%;
+  margin-top: 100px 0;
+  width: 80% !important;
+  margin: 0 auto;
 }
 
 .card{
@@ -22,6 +23,8 @@
 .gridcontainer{
   display: flex;
   justify-content: center;
+  margin: 20px 0 !important;
+  margin-bottom: 50px !important;
 }
 
 .card{
