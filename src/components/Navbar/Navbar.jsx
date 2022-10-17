@@ -13,10 +13,10 @@ const Navbar = () => {
             COVID-19
           </Typography>
           <Typography variant="h6">
-            <Link to="/" className={styles.navbutton}>Home</Link>
+            <Link to="/covid19tracker" className={styles.navbutton}>Home</Link>
           </Typography>
           <Typography variant="h6">
-            <Link to="/statistics" className={styles.navbutton}>Statistics</Link>
+            <Link to="/covid19tracker/statistics" className={styles.navbutton}>Statistics</Link>
           </Typography>
         </Toolbar>
       </AppBar>

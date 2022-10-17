@@ -12,8 +12,8 @@ function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.links}>
-        <Link to="/" className={styles.footerbutton}>Home</Link>
-        <Link to="/statistics" className={styles.footerbutton}>Statistics</Link>
+        <Link to="/covid19tracker" className={styles.footerbutton}>Home</Link>
+        <Link to="/covid19tracker/statistics" className={styles.footerbutton}>Statistics</Link>
       </div>
       <div className={styles.icons}>
         <a href="https://github.com/luda9"><FontAwesomeIcon className={styles.icon} icon={faGithub} /></a>
