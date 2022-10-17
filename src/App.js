@@ -29,8 +29,8 @@ class App extends React.Component {
 		return (
 			<div className={styles.container}>
         <Routes>
-          <Route path="/" element={<><Navbar /><Banner /><Bar /><Covidinfo /><TrackerSection /><Footer /><Helmet><title>Covid Tracker - Home</title></Helmet></>}/>
-          <Route path="/statistics" element={<><Navbar /><Cards data={data}/><StatePicker handleStateChange={this.handleStateChange} /><Chart data={data} state={state} /><Footer /><Helmet><title>Covid Tracker - Statistics</title></Helmet></>}/>
+          <Route path="/covid19tracker" element={<><Navbar /><Banner /><Bar /><Covidinfo /><TrackerSection /><Footer /><Helmet><title>Covid Tracker - Home</title></Helmet></>}/>
+          <Route path="/covid19tracker/statistics" element={<><Navbar /><Cards data={data}/><StatePicker handleStateChange={this.handleStateChange} /><Chart data={data} state={state} /><Footer /><Helmet><title>Covid Tracker - Statistics</title></Helmet></>}/>
         </Routes>
 			</div>
 			)
