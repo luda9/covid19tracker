@@ -6,7 +6,7 @@ import cx from "classnames";
 import styles from "./Cards.module.css";
 
 const Cards = ({ data: { positive, negative, death, dateChecked }}) => {
-  if(!positive){
+  if(!positive && !negative){
     return "loading";
   }
 

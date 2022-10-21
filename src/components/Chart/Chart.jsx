@@ -67,7 +67,7 @@ const Chart = ( {data: {positive, negative, death}, state}) => {
   console.log(positive, negative, death)
 
   const barChart = (
-    positive
+    (positive || negative)
       ? (
         <Bar
           data={{

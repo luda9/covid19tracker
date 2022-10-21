@@ -24,7 +24,7 @@ function NameToCode(stateName) {
   else if(stateName === 'Massachusetts'){ return 'ma'}
   else if(stateName === 'Michigan'){ return 'mi'}
   else if(stateName === 'Minnesota'){ return 'mn'}
-  else if(stateName === 'Mississippi'){ return 'Ms'}
+  else if(stateName === 'Mississippi'){ return 'ms'}
   else if(stateName === 'Missouri'){ return 'mo'}
   else if(stateName === 'Montana'){ return 'mt'}
   else if(stateName === 'Nebraska'){ return 'ne'}
